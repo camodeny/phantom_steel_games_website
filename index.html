@@ -445,6 +445,45 @@
 
     <!-- Hero Section -->
     <section id="hero">
+        <style>
+             .hero-logo-bg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.8);
+                width: 600px;
+                max-width: 90vw;
+                height: auto;
+                opacity: 0;
+                z-index: 1; 
+                pointer-events: none;
+                animation: logoFadeIn 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+                animation-delay: 0.5s;
+                filter: blur(10px);
+            }
+
+            @keyframes logoFadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translate(-50%, -50%) scale(0.8);
+                    filter: blur(20px);
+                }
+                100% {
+                    opacity: 0.2; /* Subtle background presence */
+                    transform: translate(-50%, -50%) scale(1);
+                    filter: blur(0px);
+                }
+            }
+            
+            /* Ensure text sits above the logo */
+            .glitch-wrapper, .lead, .scrolldown {
+                z-index: 10;
+                position: relative;
+            }
+        </style>
+        
+        <img src="logo_v2.png" class="hero-logo-bg" alt="Phantom Steel Logo">
+
         <div class="glitch-wrapper reveal active">
             <h1 class="glitch-logo" data-text="PHANTOM STEEL">PHANTOM STEEL</h1>
             <div class="glitch-logo white" data-text="GAMES">GAMES</div>
