@@ -476,9 +476,13 @@
             }
             
             /* Ensure text sits above the logo */
-            .glitch-wrapper, .lead, .scrolldown {
+            /* Ensure text sits above the logo */
+            .glitch-wrapper, .lead {
                 z-index: 10;
                 position: relative;
+            }
+            .scrolldown {
+                z-index: 10;
             }
         </style>
         
@@ -553,14 +557,21 @@
         <div class="card reveal" style="max-width: 500px; text-align: center;">
             <h3>Get in Touch</h3>
             <p style="margin-bottom: 2rem;">contact@phantomsteel.dev</p>
-            <a href="#" class="card-link" style="border: 1px solid var(--primary); padding: 10px 20px; border-radius: 5px; transition: background 0.3s, color 0.3s; color: var(--primary);">
+            <a href="#" class="card-link cta-button">
                 Send Transmission
             </a>
             <style>
                 /* Local style override for button hover */
-                #join .card-link:hover {
+                #join .cta-button {
+                    border: 1px solid var(--primary);
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    transition: background 0.3s, color 0.3s;
+                }
+                #join .cta-button:hover {
                     background: var(--primary);
-                    color: black;
+                    color: var(--dark);
+                    font-weight: bold;
                 }
             </style>
         </div>
